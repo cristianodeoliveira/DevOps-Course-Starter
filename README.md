@@ -32,7 +32,7 @@ You'll also need to clone a new `.env` file from the `.env.template` to store lo
 $ cp .env.template .env  # (first time only)
 ```
 
-The `.env` file is used by flask to set environment variables when running `flask run`. This enables things like development mode (which also enables features like hot reloading when you make a file change). There's also a [SECRET_KEY](https://flask.palletsprojects.com/en/1.1.x/config/#SECRET_KEY) variable which is used to encrypt the flask session cookie.
+The `.env` file is used by flask to set environment variables when running `flask run`. This enables things like development mode (which also enables features like hot reloading when you make a file change). There's also a [SECRET_KEY](https://flask.palletsprojects.com/en/2.3.x/config/#SECRET_KEY) variable which is used to encrypt the flask session cookie.
 
 ## Running the App
 
@@ -43,12 +43,13 @@ $ poetry run flask run
 
 You should see output similar to the following:
 ```bash
- * Serving Flask app "app" (lazy loading)
- * Environment: development
+ * Serving Flask app 'todo_app/app'
  * Debug mode: on
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
- * Restarting with fsevents reloader
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 226-556-590
+ * Debugger PIN: 113-666-066
 ```
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
