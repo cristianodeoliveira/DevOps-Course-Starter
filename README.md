@@ -18,6 +18,10 @@ curl -sSL https://install.python-poetry.org | python3 -
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
 
+You can check poetry is installed by running `poetry --version` from a terminal.
+
+**Please note that after installing poetry you may need to restart VSCode and any terminals you are running before poetry will be recognised.**
+
 ## Dependencies
 
 The project uses a virtual environment to isolate package dependencies. To create the virtual environment and install required packages, run the following from your preferred shell:
