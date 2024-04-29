@@ -11,4 +11,4 @@ app.config.from_object(Config())
 def index():
     #return 'Hello World!!!!'
     items = get_items()
-    return render_template ('index.html', todo_items = items)
+    return render_template ('index.html', items = items)
