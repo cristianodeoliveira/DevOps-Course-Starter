@@ -40,4 +40,16 @@ def get_items():
     
     return items
 
-    
+def move_item_to_done(item_id):
+    reqUrl = f"https://api.trello.com/1/cards/{item_id}"
+
+    query_params = {
+        "key": os.getenv("TRELLO_API_KEY"),
+        "token": os.getenv("TRELLO_API_TOKEN"),
+        "idList": os.getenv("TRELLO_DONE_LIST_ID"),
+    }
+
+    requests.put(reqUrl,  params = query_params)
+    #The following line of code allows for the item to be moved but it throws an error. 
+    # ????
+    #response.raise_for_status()
