@@ -6,7 +6,7 @@ dotenv.load_dotenv()
 
 board_id = os.getenv("TRELLO_BOARD_ID")
 
-reqUrl = "https://api.trello.com/1/boards/{board_id}/lists"
+reqUrl = f"https://api.trello.com/1/boards/{board_id}/lists"
 
 query_params = {
     "key": os.getenv("TRELLO_API_KEY"),
@@ -14,7 +14,7 @@ query_params = {
     "cards" : "open"
 }
 
-response = requests.get(reqUrl,  params = query_params)
+response = requests.get(reqUrl, params = query_params)
 
 response_list = response.json()
 
