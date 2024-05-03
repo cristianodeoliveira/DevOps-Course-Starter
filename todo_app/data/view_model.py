@@ -5,5 +5,13 @@ class ViewModel:
         self._items = items
  
     @property
-    def items(self):
-        return self._items
+    def todo_items(self):
+        return []
+    
+    @property
+    def doing_items(self):
+        return []
+    
+    @property
+    def done_items(self):
+        return []
