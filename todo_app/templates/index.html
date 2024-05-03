@@ -17,7 +17,7 @@
     <div class="col-md-12">
       <h2>Items</h2>
       <ul class="list-group mb-4">
-        {% for item in items %}
+        {% for item in view_model.items() %}
           <li>{{ item.name }} - {{ item.status }}</li>
           <form action="complete-item/{{item.id}}" method="post">
             <button>Complete</button>
