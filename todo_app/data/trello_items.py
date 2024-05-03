@@ -49,7 +49,6 @@ def move_item_to_done(item_id):
         "idList": os.getenv("TRELLO_DONE_LIST_ID"),
     }
 
-    requests.put(reqUrl,  params = query_params)
-    #The following line of code allows for the item to be moved but it throws an error. 
-    # ????
-    #response.raise_for_status()
+    response = requests.put(reqUrl,  params = query_params)
+
+    response.raise_for_status()
