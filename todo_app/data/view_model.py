@@ -4,6 +4,6 @@ class ViewModel:
     def __init__(self, items: list[Item]):
         self._items = items
  
-    #@property
+    @property
     def items(self):
         return self._items
