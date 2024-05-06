@@ -7,9 +7,11 @@ class ViewModel:
     @property
     def todo_items(self) -> list[Item]:
         output = []
+        
         for item in self._items:
             if item.status == "To Do":
                 output.append(item)
+                
         return output
     
     @property
