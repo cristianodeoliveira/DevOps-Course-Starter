@@ -20,7 +20,7 @@ def test_todo_only_list_todo_items():
     assert returned_single_item.status == "To Do"
 
 # Test Doing items
-def test_todo_only_list_todo_items():
+def test_doing_only_list_doing_items():
     #Arrange
     items =[
         Item(1,"Started Todo","To Do"),
