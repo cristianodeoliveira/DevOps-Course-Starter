@@ -11,7 +11,7 @@ class ViewModel:
         for item in self._items:
             if item.status == "To Do":
                 output.append(item)
-                
+        print ("Todo items",output)        
         return output
     
     @property
@@ -20,6 +20,7 @@ class ViewModel:
         for item in self._items:
             if item.status == "Doing":
                 output.append(item)
+        print ("Doing items",output)  
         return output
 
     @property
@@ -28,4 +29,5 @@ class ViewModel:
         for item in self._items:
             if item.status == "Done":
                 output.append(item)
+        print ("Done items",output)  
         return output
