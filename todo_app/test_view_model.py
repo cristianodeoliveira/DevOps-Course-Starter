@@ -17,7 +17,7 @@ def test_todo_only_list_todo_items():
     #Assert
     assert len(returned_items) == 1
     returned_single_item = returned_items[0]
-    assert returned_single_item.status == "To Do"
+    assert returned_single_item[("status")] == "To Do"
 
 # Test Doing items
 def test_doing_only_list_doing_items():
@@ -35,7 +35,7 @@ def test_doing_only_list_doing_items():
     #Assert
     assert len(returned_items) == 1
     returned_single_item = returned_items[0]
-    assert returned_single_item.status == "Doing"
+    assert returned_single_item[("status")] == "Doing"
 
 
 # Test done items
@@ -54,6 +54,6 @@ def test_done_only_list_done_items():
     #Assert
     assert len(returned_items) == 1
     returned_single_item = returned_items[0]
-    assert returned_single_item.status == "Done"
+    assert returned_single_item["status"] == "Done"
 
 
