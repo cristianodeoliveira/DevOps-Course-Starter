@@ -23,7 +23,7 @@ def test_index_page(monkeypatch, client):
 
     response = client.get('/')
     
-    #assert response.status_code == 200
+    assert response.status_code == 200
     
     assert 'Test card' in response.data.decode()
 
@@ -32,8 +32,8 @@ class StubResponse():
         self.fake_response_data = fake_response_data
     
     def raise_for_status(self):
-        pass
-        #return 200
+        #pass
+        return 200
 
     def json(self):
         return self.fake_response_data
