@@ -17,7 +17,7 @@ def test_todo_only_list_todo_items():
     #Assert
     assert len(returned_items) == 1
     returned_single_item = returned_items[0]
-    assert returned_single_item[("status")] == "To Do"
+    assert returned_single_item.status == "To Do"
 
 # Test Doing items
 def test_doing_only_list_doing_items():
@@ -35,16 +35,16 @@ def test_doing_only_list_doing_items():
     #Assert
     assert len(returned_items) == 1
     returned_single_item = returned_items[0]
-    assert returned_single_item[("status")] == "Doing"
+    assert returned_single_item.status == "Doing"
 
 
 # Test done items
-def test_done_only_list_done_items():
+def test_done_items_property_only_shows_done_items_and_nothing_else():
     #Arrange
-    items =[
-        Item(1,"Started Todo","To Do"),
-        Item(2,"In Progress Todo","Doing"),
-        Item(3,"Finished Todo","Done")
+    items = [
+        Item(1,"Started Todo", "To Do"),
+        Item(2,"In Progress Todo", "Doing"),
+        Item(3,"Finished Todo", "Done")
     ]
     view_model = ViewModel(items)
 
@@ -54,6 +54,4 @@ def test_done_only_list_done_items():
     #Assert
     assert len(returned_items) == 1
     returned_single_item = returned_items[0]
-    assert returned_single_item["status"] == "Done"
-
-
+    assert returned_single_item.status == "Done"
