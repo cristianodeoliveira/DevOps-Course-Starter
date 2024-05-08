@@ -1,5 +1,5 @@
 from todo_app.data.item import Item
-from todo_app.data.copy_view_model_copy import ViewModel
+from todo_app.data.view_model import ViewModel
 
 
 

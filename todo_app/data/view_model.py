@@ -27,7 +27,7 @@ class ViewModel:
     def done_items(self) -> list[Item]:
         output = []
         for item in self._items:
-            if item[("status")] == "Done":
+            if item.status == "Done":
                 output.append(item)
                 
         return output
