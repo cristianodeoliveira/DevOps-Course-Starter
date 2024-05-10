@@ -74,4 +74,4 @@ You will need to setup:
 To run the tests for the codebase run the following commands
 `poetry run pytest`
 
-Assumption is that you have installed pytest beforehand
+Assumption is that you have installed pytest beforehand.
