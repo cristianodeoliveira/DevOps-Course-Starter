@@ -9,7 +9,7 @@ class ViewModel:
         output = []
         
         for item in self._items:
-            if item["status"] == "To Do":
+            if item.status == "To Do":
                 output.append(item)
         
         return output
@@ -18,7 +18,7 @@ class ViewModel:
     def doing_items(self) -> list[Item]:
         output = []
         for item in self._items:
-            if item["status"] == "Doing":
+            if item.status == "Doing":
                 output.append(item)
         
         return output
