@@ -68,3 +68,10 @@ You will need to setup:
 * after completing the above you will need to 
 1. update the .env file to include your trello details
 2. update the .env.template file with the Trello details required for the app to work
+
+## Running the test Suite
+
+To run the tests for the codebase run the following commands
+`poetry run pytest`
+
+Assumption is that you have installed pytest beforehand
