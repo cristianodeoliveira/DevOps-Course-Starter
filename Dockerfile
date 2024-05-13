@@ -4,4 +4,4 @@ COPY . /app
 WORKDIR /app
 ENV PATH=$PATH:/root/.local/share/pypoetry/venv/lib/python3.12/site-packages/poetry
 RUN pip install poetry
-ENTRYPOINT poetry run flask run
+ENTRYPOINT poetry run flask run --host 0.0.0.0
