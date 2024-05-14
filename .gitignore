@@ -118,3 +118,6 @@ env/
 
 ### Configuration files ###
 .env
+
+### Ignore my command line file
+DockerCommands.txt
