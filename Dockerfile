@@ -1,11 +1,11 @@
 FROM python:3 AS base
 RUN curl -sSL https://install.python-poetry.org | python3 -
-COPY . /app
-WORKDIR /app
+#Optimized version of the dockerfile
 ENV PATH=$PATH:/root/.local/bin/
+WORKDIR /app
+COPY pyproject.toml poetry.toml /app/
 RUN poetry install
-ENTRYPOINT poetry run flask run --host 0.0.0.0
-
+COPY . /app
 
 # Configure for production
 FROM base AS production
