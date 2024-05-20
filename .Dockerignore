@@ -1,0 +1,6 @@
+#Ignore the '.venv' folder
+.venv/
+.env
+Dockerfile
+.git
+.vscode

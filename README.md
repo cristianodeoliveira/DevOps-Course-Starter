@@ -72,6 +72,23 @@ You will need to setup:
 ## Running the test Suite
 
 To run the tests for the codebase run the following commands
-`poetry run pytest`
+`poetry run pytest`.
 
-Assumption is that you have installed pytest beforehand
+Assumption is that you have installed pytest beforehand!
+
+## Builduing and Running the App via Docker, run them via gitBash
+To build the container for local development, please run the following
+```
+docker build --tag todo-app:dev --target development .
+```
+
+To run the container for local development please run
+```
+docker run --publish 8000:5000 -it --env-file .env --mount "type=bind,source=$(pwd)/todo_app,target=/app/todo_app" todo-app:dev
+
+```
+
+For the production container, the build and run commands below:
+
+```docker build --tag todo-app:prod --target production .
+docker run --publish 8000:5000 -it --env-file .env todo-app:prod```
