@@ -5,7 +5,8 @@ ENV PATH=$PATH:/root/.local/bin/
 WORKDIR /app
 COPY pyproject.toml poetry.toml /app/
 RUN poetry install
-COPY . /app
+#COPY . /app
+COPY todo_app /app/todo_app
 
 # Configure for production
 FROM base AS production
