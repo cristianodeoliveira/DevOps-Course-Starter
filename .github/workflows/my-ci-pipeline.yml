@@ -3,7 +3,7 @@ on:
   push:
     paths:
       - 'README.md'
-  pull-request:
+  pull_request:
       paths:
         - 'README.md'
 jobs:
