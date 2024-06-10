@@ -4,8 +4,8 @@ on:
     paths:
       - 'README.md'
   pull_request:
-      paths:
-        - 'README.md'
+    paths:
+      - 'README.md'
 jobs:
   build:
     name: Build and test
