@@ -8,11 +8,14 @@ RUN poetry install
 #COPY . /app
 COPY todo_app /app/todo_app
 
+# Setting up test container
+FROM base as test
+ENTRYPOINT poetry run pytest
+
 # Configure for production
 FROM base AS production
 ENV FLASK_DEBUG=false
 ENTRYPOINT poetry run flask run --host 0.0.0.0
-
 
 # Configure for local development
 FROM base AS development
