@@ -90,7 +90,7 @@ docker build --tag todo-app:test --target test .
 docker run todo-app:test
 ```
 
-To run the container for local development please run
+To run the container for local development please run.
 ```
 docker run --publish 8000:5000 -it --env-file .env --mount "type=bind,source=$(pwd)/todo_app,target=/app/todo_app" todo-app:dev
 
