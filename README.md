@@ -96,10 +96,19 @@ docker run --publish 8000:5000 -it --env-file .env --mount "type=bind,source=$(p
 
 ```
 
-For the production container follow, the build and run commands below:
+### For the production container follow, the build and run commands below:
 
-```docker build --tag todo-app:prod --target production .
-docker run --publish 8000:5000 -it --env-file .env todo-app:prod```
+```
+docker build --tag todo-app:prod --target production .
+
+docker run --publish 8000:5000 -it --env-file .env todo-app:prod
+```
 
 ## Diagrams
 Architecture diagrams can be found in the `Diagram` folder, created in (app.diagrams.net).
+
+### For the production container hosted in Azure you can use the hyperlink below
+
+```
+ https://todoappwebapp.azurewebsites.net 
+ ```
