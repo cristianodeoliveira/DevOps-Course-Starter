@@ -76,13 +76,15 @@ To run the tests for the codebase run the following commands
 
 Assumption is that you have installed pytest beforehand!
 
-## Builduing and Running the App via Docker, run them via gitBash
+## Docker
+
+### Builduing and Running the App via Docker, run them via gitBash
 To build the container for local development, please run the following
 ```
 docker build --tag todo-app:dev --target development .
 ```
 
-## Running the Test Suite under Docker
+### Running the Test Suite under Docker
 (Please make sure you have run poetry install beforehand to install pytest)
 ```
 docker build --tag todo-app:test --target test .
@@ -96,10 +98,21 @@ docker run --publish 8000:5000 -it --env-file .env --mount "type=bind,source=$(p
 
 ```
 
-For the production container follow, the build and run commands below:
+### Running Prod under Docker - build and run commands
 
-```docker build --tag todo-app:prod --target production .
-docker run --publish 8000:5000 -it --env-file .env todo-app:prod```
+```
+docker build --tag todo-app:prod --target production .
 
-## Diagrams
+docker run --publish 8000:5000 -it --env-file .env todo-app:prod
+```
+
+## Architecture Diagrams
 Architecture diagrams can be found in the `Diagram` folder, created in (app.diagrams.net).
+
+## Azure deployment
+
+#### For the production container hosted in Azure you can use the hyperlink below
+
+```
+ https://todoappwebapp.azurewebsites.net 
+ ```
