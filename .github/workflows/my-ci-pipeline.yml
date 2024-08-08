@@ -30,4 +30,5 @@ jobs:
           password: ${{secrets.DOCKER_TOKEN}}
       - run: docker build --tag cristianodeoliveira/todo-app:prodlatest --target production .
       - run: docker push cristianodeoliveira/todo-app:prodlatest
+      - run: curl -dH -X POST ${{ secrets.AZURE_WEBHOOK }}
 
