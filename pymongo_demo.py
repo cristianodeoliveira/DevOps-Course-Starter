@@ -6,8 +6,8 @@ dotenv.load_dotenv()
 
 client = pymongo.MongoClient (os.getenv("MONGODB_CONNECTION_STRING"))
 
-db = client.todoappmongodb
-collection = db.todo_entries
+db = client[os.getenv("MONGODB_DB_NAME")]
+collection = db[os.getenv("MONGODB_COLLECTION_NAME")]
 
 # insert a record
 #collection.insert_one ({"description":"First pymongo document"})
