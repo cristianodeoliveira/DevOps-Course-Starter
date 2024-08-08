@@ -58,16 +58,18 @@ Press CTRL+C to quit
 ```
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
 
-## Setting up Trello 
+## Setting up Mongodb database 
 
-This app uses the Trello API for storing the TODO items.
+This app uses the Mongodb database for storing the TODO items.
 You will need to setup:
 
-* Trello account with Trello
-* An API key and token
-* after completing the above you will need to 
-1. update the .env file to include your trello details
-2. update the .env.template file with the Trello details required for the app to work
+* A Mongodb account
+* Provide a connection string to connect to the database
+* Provide a database name
+* Provide a collection name
+
+Once you have done this you will need to update the `.env` file
+to include your Mongodb details.
 
 ## Running the test Suite
 
