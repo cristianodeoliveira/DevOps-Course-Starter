@@ -120,3 +120,4 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 #### GitHub Actions
 
 build pipeline created.
+Added Docker build and push to Github Actions
