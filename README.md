@@ -116,3 +116,7 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 ```
  https://todoappwebapp.azurewebsites.net 
  ```
+
+#### GitHub Actions
+
+build pipeline created
