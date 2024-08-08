@@ -22,5 +22,5 @@ jobs:
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/exercise-9'}}
     steps:
       - uses: actions/checkout@v2
-      - run: echo hello world
+      - run: echo hello world!
 
