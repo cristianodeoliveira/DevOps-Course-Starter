@@ -123,3 +123,4 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 - Added Docker build and push to Github Actions - to prodlatest in Docker
 - Added Azure webhook
 - Made a change to the landing page of the website - fixed a bug.
+- added OR clause to the Actions pipeline
