@@ -10,6 +10,9 @@ Flask = "^2.2.5"
 python-dotenv = "^0.14.0"
 requests = "^2.31.0"
 pytest = "^8.2.0"
+pymongo = "^4.8.0"
+mongomock = "^4.1.2"
+setuptools = "^72.1.0"
 
 [tool.poetry.dev-dependencies]
 
