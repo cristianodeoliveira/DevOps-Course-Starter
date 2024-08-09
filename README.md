@@ -127,6 +127,14 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 - Made a change to the landing page of the website - fixed a bug.
 - added OR clause to the Actions pipeline
 
-#### Exercise-11
+#### Data encryption Cosmos Database, data encryption at Rest and On transit
 
-- started 9.08.24
+Todo items are stored in a Cosmos DB Database (using a MongoDB API)
+[Microsoft Documentation](https://learn.microsoft.com/en-us/azure/cosmos-db/database-encryption-at-rest)
+
+**Data encryption in Azure Cosmos DB**
+>...encryption at rest for Azure Cosmos DB, all your databases, media attachments, and backups are encrypted. Your data is now encrypted in transit (over the network) and at rest (nonvolatile storage), giving you end-to-end encryption.
+
+#### Data encryption in transit
+
+Enforced HTTPS via Azure portal webservice Configuration by changing Setting, Configuration HTTPS ONLY set it to ON
