@@ -19,5 +19,9 @@ ENV FLASK_DEBUG=true
 ENTRYPOINT poetry run flask run --host 0.0.0.0
 
 # Setting up test container
-FROM base as test
+FROM base AS test
 ENTRYPOINT poetry run pytest
+
+# Setting up test container
+FROM base AS dependency_scan
+ENTRYPOINT poetry run safety check

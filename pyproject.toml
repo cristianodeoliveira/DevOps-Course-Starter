@@ -13,6 +13,7 @@ pytest = "^8.2.0"
 pymongo = "^4.8.0"
 mongomock = "^4.1.2"
 setuptools = "^72.1.0"
+safety = "^3.2.4"
 
 [tool.poetry.dev-dependencies]
 
