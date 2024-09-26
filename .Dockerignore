@@ -4,3 +4,8 @@
 Dockerfile
 .git
 .vscode
+#Terraform ignore files, same as in gitignore
+.terraform/
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.3.0/darwin_amd64/terraform-provider-azurerm_v4.3.0_x5
+*.tfstate
+*terraform.*
