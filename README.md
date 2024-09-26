@@ -128,4 +128,4 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 - added OR clause to the Actions pipeline
 
 #### Exercise-12
-This is the start of exercise 12
+This is the start of exercise 12.
