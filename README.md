@@ -126,3 +126,5 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 - Added Azure webhook
 - Made a change to the landing page of the website - fixed a bug.
 - added OR clause to the Actions pipeline
+
+### Deleted both exercise and workshop 12
