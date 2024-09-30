@@ -5,6 +5,13 @@ terraform {
             version = ">= 3.8"
         }
     }
+    backend "azurerm" {
+        resource_group_name = "Cohort31_CriOli_ProjectExercise"
+        storage_account_name = "cristianom12storageacc"
+        container_name = "tfcontainer"
+        key = "terraform.tfstate"
+    }
+}
 }
 
 provider "azurerm" {
@@ -17,7 +24,7 @@ data "azurerm_resource_group" "main" {
 }
 
 resource "azurerm_service_plan" "main" {
-    name = "terraformed-asp"
+    name = "${var.prefix}-terraformed-asp"
     location = data.azurerm_resource_group.main.location
     resource_group_name = data.azurerm_resource_group.main.name
     os_type = "Linux"
@@ -25,7 +32,7 @@ resource "azurerm_service_plan" "main" {
 }
 
 resource "azurerm_linux_web_app" "main" {
-    name = "cristianoterraformapp"
+    name = "${var.prefix}-cristianoterraformapp"
     location = data.azurerm_resource_group.main.location
     resource_group_name = data.azurerm_resource_group.main.name
     service_plan_id = azurerm_service_plan.main.id
