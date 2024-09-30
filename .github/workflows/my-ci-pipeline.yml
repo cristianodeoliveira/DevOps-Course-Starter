@@ -21,6 +21,11 @@ jobs:
     needs: build
     # added the new branch exercise 10
     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/exercise-12' || github.ref == 'refs/heads/main' }}
+    env:
+      ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+      ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+      ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
     steps:
       - uses: actions/checkout@v2
       - run: echo hello deploy!
