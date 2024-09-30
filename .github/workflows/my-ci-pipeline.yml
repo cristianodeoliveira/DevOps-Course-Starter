@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     # added the new branch exercise 10
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/exercise-10' || github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/exercise-12' || github.ref == 'refs/heads/main' }}
     steps:
       - uses: actions/checkout@v2
       - run: echo hello deploy!
