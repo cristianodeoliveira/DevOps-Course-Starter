@@ -31,5 +31,6 @@ jobs:
           password: ${{secrets.DOCKER_TOKEN}}
       - run: docker build --tag ${{secrets.DOCKER_USERNAME}}/todo-app:prodlatest --target production .
       - run: docker push ${{secrets.DOCKER_USERNAME}}/todo-app:prodlatest
-      - run: curl -dH -X POST '${{ secrets.AZURE_WEBHOOK }}'
-
+      - run: terraform init
+      - run: terraform apply -auto-approve -var prefix=demo
+      - run: curl -dH -X POST "$(terraform output -raw webhook_url)"
