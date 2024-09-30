@@ -32,9 +32,51 @@ resource "azurerm_linux_web_app" "main" {
     
     site_config {
         application_stack {
-            docker_image_name = "appsvcsample/python-helloworld"
+            docker_image_name = "cristianodeoliveira/todo-app:prodlatest"
             docker_registry_url = "https://index.docker.io"
         }
     }
+        app_settings = {
+        FLASK_APP = "todo_app/app"
+        FLASK_DEBUG = "true"
+        SECRET_KEY = "secret-key"
+        MONGODB_CONNECTION_STRING = azurerm_cosmosdb_account.main.primary_mongodb_connection_string
+        MONGODB_DB_NAME = "todoappmongodb"
+        MONGODB_COLLECTION_NAME = "todo_entries"
+        WEBSITES_PORT = "5000"
+    }
 }
 
+
+
+resource "azurerm_cosmosdb_account" "main" {
+  name                = "cristiano-terraform-db"
+  location            = data.azurerm_resource_group.main.location
+  resource_group_name = data.azurerm_resource_group.main.name
+  offer_type          = "Standard"
+  kind                = "MongoDB"
+
+  capabilities {
+    name = "MongoDBv3.4"
+  }
+
+  capabilities {
+    name = "EnableMongo"
+  }
+
+  capabilities {
+    name = "EnableServerless"
+  }
+
+  consistency_policy {
+    consistency_level       = "BoundedStaleness"
+    max_interval_in_seconds = 300
+    max_staleness_prefix    = 100000
+  }
+
+  geo_location {
+    location          = "uksouth"
+    failover_priority = 0
+  }
+
+}
