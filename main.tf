@@ -9,7 +9,7 @@ terraform {
         resource_group_name = "Cohort31_CriOli_ProjectExercise"
         storage_account_name = "cristianom12storageacc"
         container_name = "tfcontainer"
-        #key = "terraform.tfstate"
+        key = "terraform.tfstate"
     }
 }
 
