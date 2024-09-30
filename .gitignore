@@ -129,3 +129,4 @@ DockerCommands.txt
 *.tfstate
 *.tfstate.backup
 *terraform.*
+.terraform
