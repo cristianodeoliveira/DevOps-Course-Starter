@@ -128,4 +128,7 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
 - added OR clause to the Actions pipeline
 
 ### This is branch exercise-12
-.
+ - IaC - Infrastructure as Code, implemented using Terraform
+ - Implemented CI/CD using Terraform as instructed
+ - Successfully tested pipeline
+ - Removed all non Terraform infra from Azure subscription
