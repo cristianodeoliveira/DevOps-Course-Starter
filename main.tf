@@ -1,4 +1,4 @@
-terraform {
+git terraform {
     required_providers {
         azurerm = {
             source = "hashicorp/azurerm"
