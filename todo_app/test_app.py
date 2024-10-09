@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv, find_dotenv
-from flask.testing import FlaskClient
 import pytest
 import pymongo
 from todo_app import app
@@ -17,7 +16,7 @@ def client():
         with test_app.test_client() as client:
             yield client
         
-def test_index_page(client: FlaskClient):
+def test_index_page(client):
     # Arrange
     
     mongo_client = pymongo.MongoClient (os.getenv("MONGODB_CONNECTION_STRING"))
