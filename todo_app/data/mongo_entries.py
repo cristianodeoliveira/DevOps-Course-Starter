@@ -1,8 +1,11 @@
-from bson import ObjectId
-import pymongo
 import os
 
+import pymongo
+from bson import ObjectId
+from flask import current_app
+
 from todo_app.data.item import Item
+
 
 def get_collection():
     client = pymongo.MongoClient (os.getenv("MONGODB_CONNECTION_STRING"))
@@ -38,3 +41,4 @@ def move_item_to_done(todo_id: str):
     collection = get_collection()
     
     collection.update_one({"_id":ObjectId(todo_id)},{"$set":{"status":"Done"}})
+    current_app.logger.info("Call to MongoDb - Successfull update")

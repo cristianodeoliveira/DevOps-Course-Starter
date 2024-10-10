@@ -13,6 +13,7 @@ pytest = "^8.2.0"
 pymongo = "^4.8.0"
 mongomock = "^4.1.2"
 setuptools = "^72.1.0"
+loggly-python-handler = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 
