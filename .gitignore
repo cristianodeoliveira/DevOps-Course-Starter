@@ -132,7 +132,7 @@ DockerCommands.txt
 .terraform
 
 # Ignore minikube
-minikube-darwin-amd64
+minikube-darwin-amd64*
 
 #Ignore my local deployment .yaml
 deployment.yaml
