@@ -130,3 +130,6 @@ DockerCommands.txt
 *.tfstate.backup
 *terraform.*
 .terraform
+
+#Ignore my local deployment .yaml
+deployment.yaml
