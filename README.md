@@ -132,3 +132,8 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
  - Implemented CI/CD using Terraform as instructed
  - Successfully tested pipeline
  - Removed all non Terraform infra from Azure subscription
+
+ ### Exercise 14, inclusion of secrets and running the application locally in minikube
+  - run the application in minikube
+  - implemented secrets.yaml
+  - included secret.yaml.template for reference
