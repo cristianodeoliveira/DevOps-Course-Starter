@@ -135,4 +135,7 @@ DockerCommands.txt
 minikube-darwin-amd64*
 
 #Ignore my local deployment .yaml
-deployment.yaml
+#deployment.yaml
+
+#ignore secret.yaml
+secrect.yaml

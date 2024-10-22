@@ -1,0 +1,47 @@
+# deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: module-14
+spec:
+  selector:
+    matchLabels:
+      app: module-14
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: module-14
+    spec:
+      containers:
+        - name: todo-app
+          image: todo-app:prod
+          imagePullPolicy: Never
+          ports:
+          - containerPort: 5000
+          env:
+          - name: FLASK_APP
+            value: todo_app/app
+          - name: FLASK_DEBUG
+            value: "true"
+          - name: SECRET_KEY
+            valueFrom:
+                secretKeyRef:
+                  name: envvars
+                  key: secret_key
+          - name: MONGODB_CONNECTION_STRING
+            valueFrom:
+                secretKeyRef:
+                  name: envvars
+                  key: db_string
+          - name: MONGODB_DB_NAME
+            value: cristiano-terraform-db
+          - name: MONGODB_COLLECTION_NAME
+            value: todo_entries
+          - name: LOG_LEVEL
+            value: INFO
+          - name: LOGGLY_TOKEN
+            valueFrom:
+                secretKeyRef:
+                  name: envvars
+                  key: loggly_token
