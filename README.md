@@ -137,3 +137,4 @@ Architecture diagrams can be found in the `Diagram` folder, created in (app.diag
   - run the application in minikube
   - implemented secrets.yaml
   - included secret.yaml.template for reference
+  - removed secret.yaml from repo and re-added it after correcting the typo in the gitignore file
