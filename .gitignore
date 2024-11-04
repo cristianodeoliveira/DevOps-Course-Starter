@@ -138,4 +138,4 @@ minikube-darwin-amd64*
 #deployment.yaml
 
 #ignore secret.yaml
-secrect.yaml
+secret.yaml
