@@ -130,3 +130,12 @@ DockerCommands.txt
 *.tfstate.backup
 *terraform.*
 .terraform
+
+# Ignore minikube
+minikube-darwin-amd64*
+
+#Ignore my local deployment .yaml
+#deployment.yaml
+
+#ignore secret.yaml
+secret.yaml
